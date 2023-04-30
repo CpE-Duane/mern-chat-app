@@ -27,11 +27,11 @@ app.use("/api/messages", messageRoutes)
 
 connectDB()
 
-app.use(express.static(path.join(__dirname, 'frontend/build')));
+app.use(express.static(path.join(__dirname, '../frontend/build')));
 
 // Handles any requests that don't match the ones above
 app.get('*', (req,res) =>{
-    res.sendFile(path.join(__dirname, 'frontend/build/index.html'));
+    res.sendFile(path.join(__dirname, '../frontend/build/index.html'));
 });
 
 const server = app.listen(process.env.PORT, () => {
