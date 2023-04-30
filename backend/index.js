@@ -6,6 +6,7 @@ const messageRoutes = require("./routes/messageRoutes")
 const socket = require("socket.io")
 const bodyParser = require("body-parser")
 const corsOptions = require("./config/corsOptions")
+const path = require('path');
 
 const app = express()
 require('dotenv').config()
