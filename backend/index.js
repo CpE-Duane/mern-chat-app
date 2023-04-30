@@ -27,7 +27,11 @@ app.use("/api/messages", messageRoutes)
 
 connectDB()
 
-app.use(express.static(path.join(__dirname, 'frontend/build')));
+app.use(express.static(path.join(__dirname, '../frontend/public')));
+
+app.get('*', (req, res) => {
+     res.sendFile(path.join(__dirname, '../frontend/public/index.html'));
+});
 
 const server = app.listen(process.env.PORT, () => {
      console.log(`Server started in PORT: ${process.env.PORT}`)
