@@ -10,6 +10,12 @@ const corsOptions = require("./config/corsOptions")
 const app = express()
 require('dotenv').config()
 
+app.use((req, res, next) => {
+     res.header('Access-Control-Allow-Origin', 'https://mern-chat-app-nm0v.onrender.com');
+     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+     next();
+});
+
 app.use(bodyParser.json({ limit: '50mb' }))
 app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }))
 app.use(cors())
