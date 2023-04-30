@@ -32,7 +32,7 @@ const server = app.listen(process.env.PORT, () => {
 
 const io = socket(server, {
      cors: {
-          origin: "http://localhost:3000",
+          origin: "https://mern-chat-app-nm0v.onrender.com",
           credentials: true,
      }
 })
