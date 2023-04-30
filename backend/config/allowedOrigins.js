@@ -1,5 +1,5 @@
 const allowedOrigins = [
-     // 'https://mern-contact-app.onrender.com',
+     'https://mern-chat-app-nm0v.onrender.com',
      "http://localhost:3000"
 ]
 
